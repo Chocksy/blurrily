@@ -1,6 +1,4 @@
 module Blurrily
-  DEFAULT_HOST     = 'localhost'
-  DEFAULT_PORT     = 12021
   DEFAULT_DATABASE = 'words'
 
   LIMIT_DEFAULT = 10
