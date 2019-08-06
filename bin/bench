@@ -54,11 +54,11 @@ module Blurrily
     end
 
     def do_import
-      log "Counting data entries"
+      log 'Counting data entries'
       rows = 0
       get_reader.each_line { |line| rows += 1 }
 
-      log "Importing data"
+      log 'Importing data'
       progress = ProgressBar.new(key.to_s, rows)
       get_reader.each_line do |line|
         index, needle = line.strip.split("\t")
