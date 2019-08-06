@@ -16,7 +16,7 @@ strings, quickly. It scales well: its response time is typically 1-2ms on
 user-input datasets and 75-100ms on pathological datasets
 ([more](#benchmarks)).
 
-Blurrily is compatible and tested with all MRI Rubies from 1.9.3 to 2.2.0.
+Blurrily is compatible and tested with all MRI Rubies from 2.2.0 to 2.4.4.
 It is tested on Linux 2.6 (32bit and 64bit) and MacOS X 10.8.
 
 Blurrily uses a tweaked [trigram](http://en.wikipedia.org/wiki/N-gram)-based
@@ -36,40 +36,7 @@ Or install it yourself as:
 
     $ gem install blurrily
 
-## Docker
-
-You can optionally run [Burrily as a Docker Container](https://github.com/mrmattwright/docker-blurrily). Maintained by [MrMattWright](https://github.com/mrmattwright).
-
 ## Usage
-
-You can use blurrily as a client/server combination (recommended in
-production), or use the internals standalone.
-
-See the [API Documentation](http://rubydoc.info/github/mezis/blurrily/frames)
-for more details.
-
-### Client/server
-
-Fire up a blurrily server:
-
-    $ blurrily
-
-Open up a console and connect:
-  
-  	$ irb -rubygems
-  	> require 'blurrily/client'
-  	> client = Blurrily::Client.new
-
-Store a needle with a reference:
-
-    > client.put('London', 1337)
-
-Recover a reference form the haystack:
-
-    > client.find('lonndon')
-    #=> [1337]
-
-### Standalone
 
 Create the in-memory database:
 
